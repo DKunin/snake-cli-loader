@@ -3,11 +3,14 @@
 var test = require('ava');
 var snakeloader = require('./');
 
-test('loads alright', function(t) {
-    snakeloader.start();
-    setTimeout(function() {
-        snakeloader.stop();
-        t.end();
-    }, 3000);
-    t.plan(3);
+test('loads alright', async (t) => {
+    snakeloader.start().then(() => {
+        t.pass();
+    });
+
+    snakeloader.stop().then(() => {
+        t.pass();
+    });
+
+    t.plan(2);
 });
