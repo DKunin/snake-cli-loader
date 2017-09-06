@@ -1,16 +1,18 @@
 {
   "name": "snake-cli-loader",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Simple snake loader",
   "repository": "git@github.com:DKunin/snake-cli-loader.git",
   "main": "index.js",
   "author": "dkunin",
   "scripts": {
-    "test": "jshint index.js && node test.js"
+    "test": "node test.js"
   },
   "license": "MIT",
+  "devDependencies": {
+    "ava": "0.0.4"
+  },
   "dependencies": {
-    "ava": "0.0.4",
     "chalk": "^1.1.0",
     "log-update": "^1.0.0"
   }
